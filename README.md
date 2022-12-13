@@ -1,5 +1,5 @@
 # Execute-Program.
-<h2>learning:</h2>
+<h2> 1. learning:</h2>
 <p>This course covers JavaScript as it exists today. It assumes basic familiarity with JavaScript:
 
 You should know how to define a function and write an if.
