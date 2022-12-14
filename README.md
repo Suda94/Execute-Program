@@ -8,3 +8,18 @@ You should know common array operations, like map and filter. If you need to lea
 Variable scoping has often been a sore point in JavaScript. The simplest assignment syntax, x = 1, defines a global variable. That's rarely what we want!
 
 Fortunately, modern versions of JavaScript have "strict mode". It prevents many kinds of mistakes, including global variable definitions like x = 1. Strict mode is enabled by putting the string 'use strict' at the top of a module or function.</p>
+//
+<h2> 2. let</h2>
+<p>Add a value of x that makes this code produce the result shown at the bottom. We'll always run all of the code together from top to bottom: both the code that you can't change and the code that you wrote.
+
+function double(aNumber) {
+  return 2 * aNumber;
+}
+3
+const x = 3
+double(x);
+GOAL:
+6
+YOURS:
+6
+</p>
