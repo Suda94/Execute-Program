@@ -22,4 +22,36 @@ GOAL:
 6
 YOURS:
 6
-</p>
+<br>
+<p>Before 2015, local variables in JavaScript were declared with the var keyword. When we define a var inside a function, it's only visible inside the function. We're allowed to use var in strict mode.
+
+>
+function defineX() {
+  var x = 1;
+  return x + 1;
+}
+defineX();
+RESULT:
+2
+However, trying to reference the variable outside of the function is an error.
+
+Here's a code problem:
+
+Reference x outside of the function, which will cause an error. For example, you can use a console.log or assign x a new value.
+
+function defineX() {
+  var x = 1;
+}
+defineX();
+0;
+x=0;
+GOAL:
+ReferenceError: x is not defined
+YOURS:
+ReferenceError: x is not defined
+
+Show Author's Answer
+Functions create a variable scope. Variables defined inside the function are visible within the function, and invisible outside the function. This is good!
+
+We expect an if block to behave the same way. If we put a var inside an if (...) { ... }, we expect the variable to be visible inside the if block, which it is:
+<p>
