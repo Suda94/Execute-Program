@@ -55,3 +55,7 @@ Functions create a variable scope. Variables defined inside the function are vis
 
 We expect an if block to behave the same way. If we put a var inside an if (...) { ... }, we expect the variable to be visible inside the if block, which it is:
 <p>
+<p>All vars are "function-scoped", which means that they're visible to the entire function body, no matter how they're defined within the function. This was a mistake in JavaScript's design: var x = 1 inside an if shouldn't be visible outside the if. It's too easy to declare a variable, thinking that it will be local to the if, then accidentally use it later in the function.
+
+Fortunately, this problem was fixed in 2015, when let was introduced. With let, a variable defined inside the if isn't visible outside the if. Trying to access it will cause an error. (You can type error when a code example will throw an error.)</p>
+
