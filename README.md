@@ -62,29 +62,27 @@ Fortunately, this problem was fixed in 2015, when let was introduced. With let, 
 Fortunately, this problem was fixed in 2015, when let was introduced. With let, a variable defined inside the if isn't visible outside the if. Trying to access it will cause an error. (You can type error when a code example will throw an error.)
 
 <br>
-function f() {
-  if (true) {
-    let x = 1;
+<br>function f() {
+ <br> if (true) {
+ <br>   let x = 1;
   }
-  return x;
+ <br> return x;
 }
-f();
-RESULT:
-ReferenceError: x is not defined
+<br>f();
+<br>RESULT:
+<br>ReferenceError: x is not defined
 let handles nested scopes properly. For example, we can define an x in the function body, then define another x inside an if. Changing the "inner" x won't change the "outer" x.
 <br>
->
+
 <br>
-function f() {
-  let x = 'outer';
-  if (true) {
-    let x = 'inner';
-  }
-  return x;
-}
-f();
-RESULT:
-'outer'
+<br>function f() {
+ <br> let x = 'outer';
+ <br> if (true) {
+ <br>   let x = 'inner';}
+ <br>return x;}
+<br>f();
+<br>RESULT:
+<br>'outer'
 <br>
 Those variables hold different values even though they have the same name. That's called "shadowing": the inner let x shadows the outer let x. Opinions vary on whether shadowing should be used sparingly, or avoided altogether. Our opinion is: use it sparingly, and only when all of the alternatives feel awkward.
 
