@@ -12,7 +12,7 @@ Fortunately, modern versions of JavaScript have "strict mode". It prevents many 
 <h2> 2. let</h2>
 <p>Add a value of x that makes this code produce the result shown at the bottom. We'll always run all of the code together from top to bottom: both the code that you can't change and the code that you wrote.
 
-function double(aNumber) {
+<br>function double(aNumber) {
   return 2 * aNumber;
 }
 3
@@ -25,21 +25,21 @@ YOURS:
 <br>
 <p>Before 2015, local variables in JavaScript were declared with the var keyword. When we define a var inside a function, it's only visible inside the function. We're allowed to use var in strict mode.
 
->
-function defineX() {
+<br>function defineX() {
   var x = 1;
   return x + 1;
 }
 defineX();
 RESULT:
 2
+<br>
 However, trying to reference the variable outside of the function is an error.
 
 Here's a code problem:
 
 Reference x outside of the function, which will cause an error. For example, you can use a console.log or assign x a new value.
 
-function defineX() {
+<br>function defineX() {
   var x = 1;
 }
 defineX();
@@ -49,7 +49,7 @@ GOAL:
 ReferenceError: x is not defined
 YOURS:
 ReferenceError: x is not defined
-
+<br>
 Show Author's Answer
 Functions create a variable scope. Variables defined inside the function are visible within the function, and invisible outside the function. This is good!
 
@@ -63,7 +63,7 @@ Fortunately, this problem was fixed in 2015, when let was introduced. With let, 
 
 Fortunately, this problem was fixed in 2015, when let was introduced. With let, a variable defined inside the if isn't visible outside the if. Trying to access it will cause an error. (You can type error when a code example will throw an error.)
 
->
+<br>
 function f() {
   if (true) {
     let x = 1;
@@ -74,8 +74,9 @@ f();
 RESULT:
 ReferenceError: x is not defined
 let handles nested scopes properly. For example, we can define an x in the function body, then define another x inside an if. Changing the "inner" x won't change the "outer" x.
-
+<br>
 >
+<br>
 function f() {
   let x = 'outer';
   if (true) {
@@ -86,6 +87,7 @@ function f() {
 f();
 RESULT:
 'outer'
+<br>
 Those variables hold different values even though they have the same name. That's called "shadowing": the inner let x shadows the outer let x. Opinions vary on whether shadowing should be used sparingly, or avoided altogether. Our opinion is: use it sparingly, and only when all of the alternatives feel awkward.
 
 We've been using if for our examples, but let scoping rules apply to any block of code in curly braces, like { ... }. For example, an outer scope can't access a variable defined inside a while; that causes an error.</p>
