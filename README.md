@@ -13,15 +13,14 @@ Fortunately, modern versions of JavaScript have "strict mode". It prevents many 
 <p>Add a value of x that makes this code produce the result shown at the bottom. We'll always run all of the code together from top to bottom: both the code that you can't change and the code that you wrote.
 
 <br>function double(aNumber) {
-  return 2 * aNumber;
-}
-3
-const x = 3
-double(x);
-GOAL:
-6
-YOURS:
-6
+ <br> return 2 * aNumber;}
+<br>3
+<br>const x = 3
+<br>double(x);
+<br>GOAL:
+<br>6
+<br>YOURS:
+<br>6
 <br>
 <p>Before 2015, local variables in JavaScript were declared with the var keyword. When we define a var inside a function, it's only visible inside the function. We're allowed to use var in strict mode.
 
