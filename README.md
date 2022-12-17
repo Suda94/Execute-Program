@@ -85,5 +85,4 @@ let handles nested scopes properly. For example, we can define an x in the funct
 <br>'outer'
 <br>
 Those variables hold different values even though they have the same name. That's called "shadowing": the inner let x shadows the outer let x. Opinions vary on whether shadowing should be used sparingly, or avoided altogether. Our opinion is: use it sparingly, and only when all of the alternatives feel awkward.
-
-We've been using if for our examples, but let scoping rules apply to any block of code in curly braces, like { ... }. For example, an outer scope can't access a variable defined inside a while; that causes an error.</p>
+<br>We've been using if for our examples, but let scoping rules apply to any block of code in curly braces, like { ... }. For example, an outer scope can't access a variable defined inside a while; that causes an error.</p>
